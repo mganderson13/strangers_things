@@ -6,7 +6,7 @@ import store from './store/store.js';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PostDetails from './features/posts/PostDetails.jsx';
 import PostPage from './features/posts/postPage.jsx';
-import Root  from 'react-dom/client';
+import Root from './layout/Root';
 
 const router = createBrowserRouter([
   {
