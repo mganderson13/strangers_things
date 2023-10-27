@@ -1,7 +1,7 @@
-import { createApi, fethcBaseQuery } from '@reduxjs/toolkit'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 const api = createApi({
-    baseQuery: fethcBaseQuery({ baseUrl: 'https://strangers-things.herokuapp.com/api/2309-FSA-ET-WEB-FT-SF', }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://strangers-things.herokuapp.com/api/2309-FSA-ET-WEB-FT-SF', }),
     endpoints: () => ({
 
     })

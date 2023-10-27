@@ -1,3 +1,19 @@
+import Post from "./post";
+import { useGetPostsQuery } from "./postSlice";
+
+export default function Posts() {
+    const { data: posts } = useGetPostsQuery();
+
+    return (
+        <>
+        {posts?.map((post)=> (
+        <Post key={post._id} post={post} />
+    ))}
+        </>
+    )
+}
+
+/* The below code is with useState and useEffect - it is replaced with using RTK Query
 import { useState, useEffect } from "react";
 import Post from "./post";
 
@@ -22,4 +38,4 @@ export default function Posts() {
             ))}
         </div>
     );
-}
+}*/

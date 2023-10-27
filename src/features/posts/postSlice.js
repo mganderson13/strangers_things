@@ -4,7 +4,9 @@ const postApi = api.injectEndpoints({
     endpoints: (builder) => ({
         getPosts: builder.query({
             query: () => '/posts',
-        transformResponse: (response) => response.posts,
+        transformResponse: (response) => response.data.posts,
         })
     })
 })
+
+export const { useGetPostsQuery } = postApi;
